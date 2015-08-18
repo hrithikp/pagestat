@@ -15,6 +15,8 @@ class Reader(object):
         self.request = None
     def __call__(self, req_url, req_hdr={}):
         self.headers.update(req_hdr)
+        if not req_url.startswith('http://'):
+            req_url = 'http://' + req_url
         self.request = Request(req_url, headers=self.headers)
         try:
             response = urlopen(self.request)

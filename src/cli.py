@@ -19,7 +19,7 @@ def main():
 def stats(data, top=5):
     counts = sorted(data.items(), key=lambda (k,v): (v,k), reverse=True)
     total = sum([c for t,c in counts])
-    summary = "Total tag names: %d\nTotal tag count: %d\n"
+    summary = "Total names: %d\nTotal count: %d\n"
     print summary % (len(counts), total)
     rank = 0
     if top < len(counts) and top > 0:

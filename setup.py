@@ -13,7 +13,7 @@ config = {
     "description": ("Generates tag usage statistics for web pages"),
     "url": "http://github.com/hrithikp/pagestat",
     "package_dir": {'pagestat':'src'},
-    "packages": get_packages('pagestat','src'),
+    "packages": get_packages('pagestat', 'src'),
     "entry_points": {
       'console_scripts': ['pagestat=pagestat.cli:main'],
     },
