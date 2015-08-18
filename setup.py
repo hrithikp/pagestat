@@ -17,6 +17,8 @@ config = {
     "entry_points": {
       'console_scripts': ['pagestat=pagestat.cli:main'],
     },
+    "test_suite":'nose.collector',
+    "tests_require":['nose'],
     "long_description": read('README.md')
 }
 setup(**config)
