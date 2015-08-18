@@ -9,7 +9,7 @@ def main():
 
     cli.add_argument('url', help='URL to read for generating stats')
     cli.add_argument('--show-top', default=5, type=int, help="Number of top items to show")
-    cli.add_argument('--stat-type', default='tags', type=str, help="Item type to gather stats for",choices=Parser.ctypes)
+    cli.add_argument('--stat-type', default='tags', type=str, help="Item type to use for gathering stats",choices=Parser.ctypes)
     args = cli.parse_args()
     
     html = read(args.url)
